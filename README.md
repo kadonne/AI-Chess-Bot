@@ -145,4 +145,4 @@ public class Test {
 ## Authors
 
 Stephen G. Ware (Original Framework)  
-Ammar Kadic (Akadic class)
+Ammar Kadic (Akadic Class)
