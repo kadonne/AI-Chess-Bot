@@ -66,7 +66,7 @@ The bot uses intelligent move ordering to improve alpha-beta pruning efficiency:
 Export Akadic.java as a JAR file and place it in the same directory as Chess.jar.
 Open the terminal and run the following command:
 ```bash
-java-Xms4g -Xmx4g -XX:NewSize=3g -jar chess.jar 2 akadic.jar bots/random.jar bots/greedy.jar
+java -Xms4g -Xmx4g -XX:NewSize=3g -jar chess.jar 2 akadic.jar bots/random.jar bots/greedy.jar
 bots/novice.jar bots/beginner.jar bots/intermediate.jar
 ```
 ###Alternative Usage
