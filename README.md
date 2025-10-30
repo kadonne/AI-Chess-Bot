@@ -83,12 +83,6 @@ import com.stephengware.java.games.chess.gui.ChessDisplay;
 import com.stephengware.java.games.chess.gui.Piece;
 
 /**
- * This class provides an UNOFFICIAL means of testing the chess bot from within
- * an IDE such as Eclipse.  Note that your bot's performance in this test
- * should reflect what will happen once it is exported, but this test IS NOT
- * how your bot will be graded.  You must export your bot as a JAR file and
- * only that JAR file will be graded.
- * 
  * @author Stephen G. Ware
  */
 public class Test {
