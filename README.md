@@ -142,7 +142,7 @@ public class Test {
 * Positional evaluation is based on static piece-square tables
 * Does not implement transposition tables for position caching
 
-## Author
+## Authors
 
 Stephen G. Ware (Original Framework)  
 Ammar Kadic (Akadic class)
