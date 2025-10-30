@@ -1,6 +1,7 @@
 # Akadic Chess Bot
 
 A Java-based chess AI that uses advanced game tree search algorithms and position evaluation to play chess strategically.
+You can find my source code under `src/com/stephengware/java/games/chess/bot`.
 
 ## Overview
 
@@ -62,13 +63,58 @@ The bot uses intelligent move ordering to improve alpha-beta pruning efficiency:
 * **Time Management**: Respects search time limits via `searchLimitReached()`
 
 ## Usage
+Export Akadic.java as a JAR file and place it in the same directory as Chess.jar.
+Open the terminal and run the following command:
+```bash
+java-Xms4g -Xmx4g -XX:NewSize=3g -jar chess.jar 2 akadic.jar bots/random.jar bots/greedy.jar
+bots/novice.jar bots/beginner.jar bots/intermediate.jar
+```
+###Alternative Usage
+You can also run the Java file below, which is located in `src/com/stephengware/java/games/chess/bot`.
+This will let you play against my bot by yourself.
 
 ```java
-// Create an instance of the Akadic bot
-Bot chessBot = new Akadic();
+package com.stephengware.java.games.chess.bot;
 
-// The bot will automatically select moves when its turn arrives
-// through the chooseMove() method which is called by the game framework
+import java.io.IOException;
+
+import com.stephengware.java.games.chess.Tournament;
+import com.stephengware.java.games.chess.gui.ChessDisplay;
+import com.stephengware.java.games.chess.gui.Piece;
+
+/**
+ * This class provides an UNOFFICIAL means of testing the chess bot from within
+ * an IDE such as Eclipse.  Note that your bot's performance in this test
+ * should reflect what will happen once it is exported, but this test IS NOT
+ * how your bot will be graded.  You must export your bot as a JAR file and
+ * only that JAR file will be graded.
+ * 
+ * @author Stephen G. Ware
+ */
+public class Test {
+
+	/**
+	 * Runs a 2 game tournament of all bots.
+	 * 
+	 * @param args ignored
+	 * @throws IOException if an input exception occurs while loading
+	 */
+	public static void main(String[] args) throws IOException {
+		Piece.load();
+		Bot[] bots = new Bot[]{
+				new Human(),
+				new Akadic(),
+//			new RandomBot(),
+//			new GreedyBot(),
+//			new NoviceBot(),
+//			new BeginnerBot(),
+//			new IntermediateBot(),
+		};
+		Tournament tournament = new Tournament(2, bots);
+		tournament.play();
+		ChessDisplay.getInstance().console.append(tournament.toString());
+	}
+}
 ```
 
 ## Implementation Details
@@ -105,4 +151,5 @@ Bot chessBot = new Akadic();
 ## Author
 
 Stephen G. Ware (Original Framework)  
+Ammar Kadic (Akadic class)
 Bot Implementation: Custom chess AI using classical evaluation techniques
