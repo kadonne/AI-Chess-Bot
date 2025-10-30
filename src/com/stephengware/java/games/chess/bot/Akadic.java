@@ -9,9 +9,7 @@ import com.stephengware.java.games.chess.bot.Bot;
 import com.stephengware.java.games.chess.state.*;
 
 /**
- * A chess bot which selects its next move at random.
- * 
- * @author Stephen G. Ware
+ * @author Ammar Kadic
  */
 public class Akadic extends Bot {
 
