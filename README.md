@@ -69,7 +69,7 @@ Open the terminal and run the following command:
 java -Xms4g -Xmx4g -XX:NewSize=3g -jar chess.jar 2 akadic.jar bots/random.jar bots/greedy.jar
 bots/novice.jar bots/beginner.jar bots/intermediate.jar
 ```
-###Alternative Usage
+### Alternative Usage
 You can also run the Java file below, which is located in `src/com/stephengware/java/games/chess/bot`.
 This will let you play against my bot by yourself.
 
