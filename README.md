@@ -145,5 +145,5 @@ public class Test {
 ## Authors
 
 Stephen G. Ware (Original Framework)  
-Ammar Kadic (Akadic class)
+Ammar Kadic (Akadic class)<br>
 Bot Implementation: Custom chess AI using classical evaluation techniques
